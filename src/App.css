@@ -1,0 +1,114 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes slideInFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.app-container {
+  animation: slideInFromRight 0.8s ease forwards;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Background animated gradient */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body, #root {
+  min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(-45deg, #3b82f6, #60a5fa, #2563eb, #1e40af);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+  transition: background-color 0.5s ease;
+}
+
+:root {
+  --bg-color: #f7f7f7;
+  --text-color: #1f2937;
+  --primary-color: #3b82f6;
+  --button-bg: #3b82f6;
+  --button-hover-bg: #2563eb;
+}
+
+[data-theme="dark"] {
+  --bg-color: #1e293b;
+  --text-color: #f8fafc;
+  --primary-color: #60a5fa;
+  --button-bg: #2563eb;
+  --button-hover-bg: #3b82f6;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Example for buttons */
+.button {
+  background-color: var(--button-bg);
+  color: white;
+  transition: background-color 0.3s ease;
+}
+.button:hover {
+  background-color: var(--button-hover-bg);
+}

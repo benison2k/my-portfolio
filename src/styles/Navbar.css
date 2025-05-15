@@ -1,0 +1,172 @@
+/* Navbar.css */
+
+/* ===== Light Mode Styles ===== */
+.navbar.light {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.navbar.light .nav-links a,
+.navbar.light .logo,
+.navbar.light .settings-button {
+  color: #000;
+}
+
+.navbar.light .nav-links a:hover {
+  color: #0077ff;
+}
+
+/* ===== Dark Mode Styles ===== */
+.navbar.dark {
+  background-color: #1f2937; /* dark slate */
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(255, 255, 255, 0.1);
+}
+
+.navbar.dark .nav-links a,
+.navbar.dark .logo,
+.navbar.dark .settings-button {
+  color: #fff;
+}
+
+.navbar.dark .nav-links a:hover {
+  color: #3b82f6; /* lighter blue */
+}
+
+/* ===== Common Navbar Styles ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 1000;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo-icon {
+  font-size: 28px;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+}
+
+.nav-icon {
+  font-size: 20px;
+}
+
+/* Settings Button */
+.settings-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 28px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.settings-button:hover {
+  color: #3b82f6;
+}
+
+/* ===== Modal Styles ===== */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  font-family: 'Poppins', sans-serif;
+  color: #1f2937;
+  text-align: center;
+}
+
+.modal-content h2 {
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.toggle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.toggle-container label {
+  font-weight: 600;
+}
+
+/* Checkbox styling */
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+/* Close Button */
+.close-button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.close-button:hover {
+  background-color: #2563eb;
+}
+
+/* Dark mode modal adjustments */
+.navbar.dark .modal-content {
+  background: #374151;
+  color: #f9fafb;
+  box-shadow: 0 8px 24px rgba(255,255,255,0.15);
+}
+
+.navbar.dark .close-button {
+  background-color: #2563eb;
+  color: #f9fafb;
+}
+
+.navbar.dark .close-button:hover {
+  background-color: #1d4ed8;
+}
